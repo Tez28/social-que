@@ -66,7 +66,7 @@ module.exports = (
     }else {
         dayMonth = dateObj.getDate();
     }
-    const yeat = dateObj.getFullYear();
+    const year = dateObj.getFullYear();
 
     //get time
     let hour;
@@ -86,6 +86,5 @@ module.exports = (
     } else {
         timeOfDay = 'am';
     }
-    
-
-}
+    const formatTimeStamp = `${formatMonth} ${dayMonth}, ${year}at ${hour}:${minites} ${timeOfDay}`
+};
