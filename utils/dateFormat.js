@@ -1,4 +1,4 @@
-const newdateSuffix = date => {
+const newDateSuffix = date => {
     let dateString = date.toString();
 
     //retrieves last character of string
@@ -54,5 +54,38 @@ module.exports = (
             11: 'December'
         };
     }
+
+    // add date object
+    const dateObj = new Date(timestamp);
+    const formatMonth = months[dateObj.getMonth()];
+
+    let dayMonth;
+
+    if (dateSuffix) {
+        dayMonth = newDateSuffix(dateObj.getDate());
+    }else {
+        dayMonth = dateObj.getDate();
+    }
+    const yeat = dateObj.getFullYear();
+
+    //get time
+    let hour;
+    if (dateObj.getHours > 12) {
+        hour = Math.floor(dateObj.getHours() /2);
+    } else {
+        hour = dateObj.getHours();
+    }
+    if (hour === 0) {
+        hour =12;
+    }
+    const minutes = dateObj.getMinutes();
+
+    let timeOfDay;
+    if (dateObj.getHours () >= 12) {
+        timeOfDay = 'pm';
+    } else {
+        timeOfDay = 'am';
+    }
     
+
 }
