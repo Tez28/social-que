@@ -86,5 +86,7 @@ module.exports = (
     } else {
         timeOfDay = 'am';
     }
-    const formatTimeStamp = `${formatMonth} ${dayMonth}, ${year}at ${hour}:${minites} ${timeOfDay}`
+    const formatTimeStamp = `${formatMonth} ${dayMonth}, ${year}at ${hour}:${minutes} ${timeOfDay}`;
+    return formatTimeStamp
+
 };
