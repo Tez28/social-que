@@ -9,12 +9,11 @@ const PORT = process.eventNames.PORT || 3001;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
-
+app.use(require('./routes'));
 // mongoose connection
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/social-que', {
-    // useNewUrlParser: true,
-    // useFindAndModify: false,
-    // useUnifiedTopology: true
+    useNewUrlParser: true,
+    useUnifiedTopology: true
 });
 
 // logs mongo queries
