@@ -88,5 +88,4 @@ module.exports = (
     }
     const formatTimeStamp = `${formatMonth} ${dayMonth}, ${year}at ${hour}:${minutes} ${timeOfDay}`;
     return formatTimeStamp
-
 };
